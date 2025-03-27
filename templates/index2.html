@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majdzivnieks</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+
+    <style>
+        style
+        .image-row {
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+<header>
+    <nav>
+        <ul>
+            <div class="container">
+            <li>
+                <a style="font-size: 20px;" href="/#">Par mums</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/patversmju">Patversmju saraksts</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" class="active" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/registeraccount">Reģistrācija</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<main>  
+    <section>
+        <h2 style="text-align: center;">Kāds mājdzīvnieks jums ir piemērots?</h2>
+        <h3 style="text-align: center;"><b>Mājdzīvnieka iegāde ir svarīgs lēmums, jo dzīvnieks kļūst par pilntiesīgu ģimenes locekli. Bet kurš mājdzīvnieks ir vispiemērotākais tieši jums? Noskaidrosim!</b></h3>
+        <h3 style="text-align: center;">***</h3>
+    </section>
+    <section>
+        <h2 style="text-align: center;">1. Suns – uzticams draugs un kompanjons</h2>
+        <h3><i>Piemērots:</i> aktīviem cilvēkiem, ģimenēm ar bērniem, tiem, kam patīk pavadīt laiku ārā.</h3>
+        <p>• Suņiem nepieciešama liela uzmanība, apmācība un regulāras pastaigas.</p>
+        <p>• Lielām šķirnēm, piemēram, labradoram vai aitu sunim, vajadzīga plaša telpa.</p>
+        <p>• Mazākas šķirnes (čivava, spits) ir vieglāk turēt dzīvoklī, bet arī tās prasa kopšanu.</p>
+    <h3>Ja esat gatavi veltīt daudz laika mājdzīvniekam un vēlaties uzticamu draugu, suns ir lieliska izvēle!</h3>
+    <div class="image-row">
+        <img src="{{ url_for('static', filename='photo/bathdoggy.jpg') }}" width="200">
+        <img src="{{ url_for('static', filename='photo/eatingdoggy.jpg') }}" width="460">
+    </div>
+    <h3 style="text-align: center;">***</h3>
+    </section>
+    <section>
+        <h2 style="text-align: center;">2. Kaķis – neatkarīgs un mīlīgs mājdzīvnieks</h2>
+        <h3><i>Piemērots:</i> cilvēkiem, kuri novērtē mājīgumu un klusumu, aizņemtiem cilvēkiem, tiem, kas dzīvo dzīvoklī.</h3>
+        <p>• Kaķi ir patstāvīgāki nekā suņi, bet arī viņiem patīk uzmanība.</p>
+        <p>• Viņi var skrāpēt mēbeles, tāpēc vajadzīgs nagu asināmais.</p>
+        <p>• Dažām šķirnēm (piemēram, Meinkūnam vai Siāmas kaķim) nepieciešama īpaša kopšana.</p>
+    <h3>Kaķis ir ideāls mājdzīvnieks tiem, kuri vēlas mīļu draugu, bet nevar veltīt daudz laika kopšanai.</h3>
+    <div class="image-row">
+        <img src="{{ url_for('static', filename='photo/bathkittycat.jpg') }}" width="200">
+        <img src="{{ url_for('static', filename='photo/kittycat.jpg') }}" width="200">
+    </div>
+    <h3 style="text-align: center;">***</h3>
+    </section>
+    <section>
+        <h2 style="text-align: center;">3. Grauzēji – mazi, bet interesanti</h2>
+        <h3><i>Piemērots:</i> cilvēkiem ar nelielu dzīves telpu, tiem, kas vēlas viegli kopjamu mājdzīvnieku.</h3>
+        <p>• Kāmis, jūrascūciņa un trusis aizņem maz vietas, bet arī prasa rūpes.</p>
+        <p>• Kāmji ir aktīvi naktī un var traucēt miegu.</p>
+        <p>• Truši prasa plašu būri un iespēju izskraidīties pa istabu.</p>
+    <h3>Grauzēji ir piemēroti tiem, kuri vēlas nelielu un viegli kopjamu mājdzīvnieku.</h3>
+    <div class="image-row">
+        <img src="{{ url_for('static', filename='photo/restinghamster.jpg') }}" width="295">
+        <img src="{{ url_for('static', filename='photo/eatinghamster.jpg') }}" width="285">
+        <img src="{{ url_for('static', filename='photo/hamstershowinghis.jpg') }}" width="235">
+    </div>
+    <h3 style="text-align: center;">***</h3>
+    </section>
+    <section>
+        <h2 style="text-align: center;"><p>Kopsavilkums</p></h2>
+        <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/graphic1.PNG') }}" width="900"></p>
+        <h3 style="text-align: center;">***</h3>
+        <h2 style="text-align: center;"><p>Secinājums</p></h2>
+        <p style="text-align: center;">✔ Ja esat aktīvs un gatavs uzņemties lielāku atbildību – izvēlieties suni.</p>
+        <p style="text-align: center;">✔ Ja vēlaties neatkarīgu, bet mīļu draugu – kaķi.</p>
+        <p style="text-align: center;">✔ Ja jums ir maz laika un vietas – grauzēju.</p>
+        <h3 style="text-align: center;">Izvēle ir jūsu rokās! Svarīgākais – mīlēt un rūpēties par savu mājdzīvnieku.</h3>
+    </section>
+    <section>
+        <main class="container">
+            <ul>
+            <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+            </ul>
+        </main>
+
+        <h3 style="color:rgb(255, 255, 255)">#TILLISALIVE</h3>
+</main>
+<footer>
+    <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+</footer>
+</body>
+</html>

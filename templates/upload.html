@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body class="fade-in">
+    <header>
+        <nav>
+            <ul>
+                <div class="container">
+                <li>
+                    <a style="font-size: 20px; text-align: center;" href="/#">Par mums</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/patversmju">Patversmju saraksts</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/registeraccount">Reģistrācija</a>
+                </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <form method="POST" enctype="multipart/form-data">
+        <h2 style="text-align: center;">Augšupielādējiet CSV failu</h2>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <label for="file"><h3>Izvēlieties CSV failu</h3></label>
+            <input type="file" name="file" id="file" accept=".csv">
+            <button type="submit">Pielādēt</button>
+        </form>
+    
+        {% if filename %}
+        <h2>File: {{ filename }} uploaded successfully!</h2>
+        <h3>CSV Content:</h3>
+        <table border="1">
+            {% for row in data %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </form>
+    <main class="container">
+        <ul>
+        <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+        </ul>
+    </main>
+    <h3 style="color:rgb(255, 255, 255)">akitoshinononome</h3>
+</main>
+<footer>
+    <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+</footer>
+</body>
+</html>

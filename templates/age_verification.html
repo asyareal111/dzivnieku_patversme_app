@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age verification</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body class="fade-in">
+    <header>
+        <nav>
+            <ul>
+                <div class="container">
+                <li>
+                    <a style="font-size: 20px; text-align: center;" href="/#">Par mums</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/patversmju">Patversmju saraksts</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+                </li>
+                <li>
+                    <a style="font-size: 20px;" href="/registeraccount">Reģistrācija</a>
+                </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <section>
+            <h2>Ludzu ievadi savu vecumu!</h2>
+            <form method="POST">
+                <label for="age">Tavs vecums:</label>
+                <input type="number" id="age" name="age" min="0" required>
+                <button type="submit">Talak</button>
+            </form>
+            
+        <main class="container">
+            <ul>
+            <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+            </ul>
+        </main>
+        <h3 style="color: rgb(255, 255, 255)">moreeastereggslmao</h3>
+    </main>
+    <footer>
+        <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+    </footer>
+    </body>
+    </html>
+<body>
+</body>
+</html>

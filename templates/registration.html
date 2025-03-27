@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body class="fade-in">
+<header>
+    <nav>
+        <ul>
+            <div class="container">
+            <li>
+                <a style="font-size: 20px; text-align: center;" href="/#">Par mums</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/patversmju">Patversmju saraksts</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" class="active" href="/registeraccount">Reģistrācija</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h2 style="text-align: center;">Reģistrācija</h2>
+        <form id="registerForm" method="POST">
+            <label for="username" style="text-align: center;">Lietotājvards:</label>
+            <input type="text" id="username" name="username" required style="text-align: center;">
+            <br>
+            <label for="password" style="text-align: center;">Parole:</label>
+            <input type="password" id="password" name="password" required style="text-align: center;">
+            <br>
+            <button type="submit" style="text-align: center;">Reģistrēties</button>
+        </form>
+        <div id="message"></div>
+    </div>
+<section>
+    <a style="font-size: 20px; color:#129710" href="/loginaccount">Jau ir reģistrets? Piesakieties!</a>
+    <main class="container">
+        <ul>
+        <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+        </ul>
+    </main>
+</main>
+<footer>
+    <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+</footer>
+    <h3 style="color:rgb(255, 255, 255)">gorgonthanksforyourexistance</h3>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const data = {
+                username: username,
+                password: password
+            };
+
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').textContent = data.message;
+                document.getElementById('message').style.color = 'green';
+            })
+            .catch(error => {
+                document.getElementById('message').textContent = 'Reģistrācija neizdevās';
+                document.getElementById('message').style.color = 'red';
+            });
+        });
+    </script>
+    </body>
+</html>

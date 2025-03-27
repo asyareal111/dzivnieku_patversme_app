@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body class="fade-in">
+<header>
+    <nav>
+        <ul>
+            <div class="container">
+            <li>
+                <a style="font-size: 20px; text-align: center;" href="/#">Par mums</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/patversmju">Patversmju saraksts</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" class="active" href="/registeraccount">Reģistrācija</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="login-container">
+        <h2 style="text-align: center;">Pieteikšana</h2>
+        {% if request.args.get('error') %}
+            <p class="error">{{ request.args.get('error') }}</p>
+        {% endif %}
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username" style="text-align: center;">Lietotajvards</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password" style="text-align: center;">Parole</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit" style="text-align: center;">Piesakieties</button>
+        </form>
+    </div>
+<section>
+<a style="font-size: 20px; color:#129710" href="/registeraccount">Nav reģistrets? Reģistrēties!</a>
+</section>
+</main>
+<main class="container">
+    <ul>
+    <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+    </ul>
+</main>
+<h3 style="color:rgb(255, 255, 255)">imtired *sad emoji* BTW ADO</h3>
+<footer>
+    <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+</footer>
+<div id="loading-overlay">
+    <div id="loading-spinner"></div>
+</div>
+<script>
+    function showLoadingScreen() {
+        document.getElementById('loading-overlay').style.display = 'block';
+    }
+
+    function hideLoadingScreen() {
+        document.getElementById('loading-overlay').style.display = 'none';
+    }
+
+    window.addEventListener('load', hideLoadingScreen);
+    
+    const forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
+        form.addEventListener('submit', function() {
+            showLoadingScreen();
+        });
+    });
+</script>
+</body>
+</html>

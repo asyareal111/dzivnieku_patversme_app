@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patversmju saraksts</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <style>
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .row img {
+            width: 100px;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body class="fade-in">
+<header>
+    <nav>
+        <ul>
+            <div class="container">
+            <li>
+                <a style="font-size: 20px;" href="/#">Par mums</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" class="active" href="/patversmju">Patversmju saraksts</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/majdzivnieks">Mājdzīvnieks TEV!</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/kopsana">Mājdzīvnieku kopšana</a>
+            </li>
+            <li>
+                <a style="font-size: 20px;" href="/registeraccount">Reģistrācija</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<main>  
+    <section>
+        <h2 style="text-align: center;">Latvijas dzīvnieku patversmju saraksts</h2>
+        <h3 style="text-align: center;"><b>Latvijā darbojas vairākas dzīvnieku patversmes, kas sniedz pagaidu patvērumu un palīdzību bezpajumtes dzīvniekiem:</b></h3>
+        <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/graphic3.PNG') }}" width="500"></p>
+        <h3 style="text-align: center;">***</h3>
+    </section>
+    <section>
+    <div class="row">
+        <img src="{{ url_for('static', filename='photo/dzivnieku.PNG') }}">
+        <h3>Patversme “Dzīvnieku draugs”</h3>
+    </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/fridriha-candera-iela-4-riga-lv-1046">Fridriha Candera iela 4, Rīga</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37167500491">67500491</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://dzd.lv/">dzd.lv</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/patversme.jpg') }}">
+            <h3>Juglas suņu patversme</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/juglas-iela-18-riga-lv-1064">Juglas iela 18, Rīga</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37167532630">67532630,</a>
+            <a style="color:#129710" href="tel: +37122493377">22493377</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://patversme.lv/">patversme.lv</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/ulubele.jpg') }}">
+            <h3>Biedrība “Dzīvnieku pansija Ulubele”</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/ropazu-novads-stopinu-pagasts-lici">Līči, Stopiņu novads</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37120203333">20203333,</a>
+            <a style="color:#129710" href="tel: +37167705593">67705593</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://ulubele.org/">ulubele.org</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/sloka.jpg') }}">
+            <h3>Slokas dzīvnieku patversme</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/dzirnavu-iela-8-jurmala-lv-2011">Dzirnavu iela 8, Sloka, Jūrmala</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37126134093">26134093</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://slokaspatversme.lv/">slokaspatversme.lv</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/meza.jpg') }}">
+            <h3>“Mežavairogi”</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/kekavas-novads-kekavas-pagasts">Mežavairogi, Ķekavas novads</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +3729139149">29139149</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://mezavairogi.lv/">mezavairogi.lv</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/ogre.jpg') }}">
+            <h3>“Ogres Ķepas”</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/indranu-iela-9-11-ogre-ogres-novads-lv-5001">Indrānu iela 9/11, Ogre</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37126342330">26342330,</a>
+            <a style="color:#129710" href="tel: +37165044224">65044224</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://ogreskepas.lv/">ogreskepas.lv</a>
+        </p>
+        <h3>***</h3>
+    </section>
+    <section>
+        <div class="row">
+            <img src="{{ url_for('static', filename='photo/otra.png') }}">
+            <h3>Dzīvnieku patversme “Otrā māja”</h3>
+        </div>
+        <p>• <b>Adrese</b>:
+            <a style="color:#129710" href="https://www.lursoft.lv/address/daugavpils-novads-demenes-pagasts-vezi-1-lv-5442/companies">Vezi-1, Demenes pagasts, Daugavpils novads</a>
+        </p>
+        <p>• <b>Telefons</b>: 
+            <a style="color:#129710" href="tel: +37120045442">20045442,</a>
+            <a style="color:#129710" href="tel: +37129790219">29790219</a>
+        </p>
+        <p>• <b>Vietne</b>: 
+            <a style="color:#129710" href="https://otramaja.lv/">otramaja.lv</a>
+        </p>
+        <main class="container">
+            <ul>
+            <p style="text-align: center;"> <img src="{{ url_for('static', filename='photo/logo.PNG') }}" width="100"></p>
+            </ul>
+        </main>
+        <h3 style="color:rgb(255, 255, 255)">sethscuff</h3>
+</main>
+<footer>
+    <p style="font-size: 12px;">&copy; 2025 Valērija Miglase. Anastasija Fedina. Darja Konovalenko</p>
+</footer>
+</body>
+</html>
